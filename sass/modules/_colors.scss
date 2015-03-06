@@ -1,0 +1,41 @@
+// Colors
+$dodgerblue: #2196f3;
+$grape: #512DA8;
+$mineshaft: #212121;
+$dovegray: #727272;
+$alabaster: #f9f9f9;
+$alto: #dfdfdf;
+
+// Theme Colors
+$theme_primary_color: $dodgerblue;
+$theme_light_color: lighten($dodgerblue, 15%);
+$theme_dark_color: darken($dodgerblue, 15%);
+$theme_accent_color: $grape;
+$theme_neutral_color: $alabaster;
+
+$theme_text_primary_color: $mineshaft;
+$theme_text_accent_color: $dovegray;
+$theme_text_inverse_color: $alabaster;
+
+$theme_border_color: $alto;
+
+// Base
+$body_background_color: $theme_neutral_color;
+
+// Header
+$header_background_color: $theme_primary_color;
+$header_text_color: $theme_text_inverse_color;
+$header_button_background_color: $theme_accent_color;
+$header_button_text_color: $theme_text_inverse_color;
+
+// Chat Box
+$chat_message_border_color: $theme_border_color;
+$chat_data_background_color: $theme_dark_color; 
+$chat_form_background_color: $theme_border_color;
+$chat_auth_background_color: $theme_primary_color;
+$chat_auth_text_color: $theme_text_inverse_color;
+$chat_auth_icon_color: $theme_accent_color;
+
+// Auth
+$auth_header_background_color: $theme_dark_color;
+$auth_header_text_color: $theme_text_inverse_color;

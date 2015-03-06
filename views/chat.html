@@ -1,0 +1,23 @@
+<div class="chat-container" ng-controller="ChatCtrl" ng-init="model = {}">
+	<ul class="chat-list" scroll-glue>
+		<li class="chat-message" ng-repeat="message in messages">
+			<span class="message-data">
+				<span class="author">{{ message.user }}</span>
+				<span class="time">{{ message.time | date:"short" }}</span>
+			</span>
+			<p class="message-content">{{ message.content }}</p> 
+		</li>
+	</ul>
+
+	<p class="auth-message" ng-if="!currentUser.loggedIn">
+		<i class="fa fa-2x fa-bullhorn"></i>
+		You aren't signed in right now. <a href="#/auth">Click here to sign in.</a>
+	</p>
+
+	<form class="chat-form" ng-submit="sendMessage(model.messageContent)" ng-if="currentUser.loggedIn">
+		<input type="text" placeholder="Say something!" ng-model="model.messageContent">
+		<button class="action-button" type="submit">
+			Send
+		</button>
+	</form>
+</div>

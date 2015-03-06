@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="six columns offset-by-three">
+		<div class="auth-container" ng-controller="AuthCtrl">
+			<div class="auth-header">
+				<h2>
+					Sign in
+				</h2>
+				<p>
+					Welcome to ng-chat. Sign in with one of the services below to get in on the conversation!
+				</p>
+			</div>
+			<div class="auth-body">
+				<button class="auth-button" type="button" ng-click="login('facebook')">
+					<i class="fa fa-2x fa-facebook-square"></i>
+					Sign in with Facebook
+				</button>
+				<button class="auth-button" type="button" ng-click="login('google')">
+					<i class="fa fa-2x fa-google-plus-square"></i>
+					Sign in with Google
+				</button>
+			</div>
+		</div>	
+	</div>
+</div>

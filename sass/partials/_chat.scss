@@ -1,0 +1,82 @@
+.chat-container {
+	@include card;
+
+	.chat-list {
+		list-style: none;
+		margin-bottom: 0;
+		min-height: 300px;
+		max-height: 500px;
+		overflow-y: auto;
+
+		.chat-message {
+			display: block;
+			margin-bottom: 0;
+			border-bottom: 1px solid $chat_message_border_color;
+
+			.message-data {
+				display: inline-block;
+				padding: 10px;
+				background-color: $chat_data_background_color;
+				color: white;
+
+				span {
+					display: block;
+					width: 100px;
+				}
+				.author {
+					font-size: 12px;
+					font-weight: bold;
+				}
+				.time {
+					font-size: 10px;
+				}
+			}
+			.message-content {
+				display: inline-block;
+				margin-bottom: 0;
+				vertical-align: top;
+				padding: 10px;
+			}
+		}
+	}
+	.auth-message {
+		padding: 15px;
+		background-color: $chat_auth_background_color;
+		color: $chat_auth_text_color;
+
+		i {
+			color: $chat_auth_icon_color;
+			margin-right: 10px;
+		}
+		a {
+			color: $chat_auth_text_color;
+		}
+	}
+	.chat-form {
+		display: block;
+		background-color: $chat_form_background_color;
+		padding: 15px;
+
+		input,
+		button {
+			margin-bottom: 0;
+		}
+
+		input {
+			width: calc(100% - 110px);
+		}
+
+		button {
+			background-color: $theme_accent_color;
+			color: $theme_text_inverse_color;
+			margin-left: 15px;
+			border: 0;
+			float: right;
+			@include material-shadow(1);
+
+			&:hover {
+				@include material-shadow(2);
+			}
+		}
+	}
+}

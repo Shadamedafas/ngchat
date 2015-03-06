@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>ng-chat</title>
+    <link rel="icon" href="assets/images/logo.png">
+
+    <!-- Dependant CSS -->
+    <link rel="stylesheet" href="bower_components/skeleton/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+
+  <body ng-app="chatApp" ng-cloak>
+
+    <header ng-controller="HeaderCtrl">
+      <div class="container">
+        <div class="row">
+          <div class="six columns">
+            <h1>
+              <a href="#/chat">
+                <img src="assets/images/logo.png">
+                ng-chat
+              </a>
+            </h1>
+          </div>
+          <div class="six columns header-right">
+            <a href="#/auth" ng-if="!currentUser.loggedIn">Sign in</a> 
+            <div class="user-info" ng-if="currentUser.loggedIn">
+              <p>Welcome, {{currentUser.userName}}</p>
+              <button type="button" ng-click="logout()">
+                <i class="fa fa-sign-out"></i>
+                Sign out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="content" class="container" ng-view>
+      <!-- Application views -->
+    </div>
+
+    <!-- Dependant JS -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/angular-scroll-glue/src/scrollglue.js"></script>
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,30 @@
+.auth-container {
+	@include card;
+
+	.auth-header {
+		padding: 15px;
+		color: $auth_header_text_color;
+		background-color: $auth_header_background_color;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.auth-body {
+		padding: 15px;
+	}
+	.auth-button {
+		display: block;
+		margin-bottom: 15px;
+		width: 100%;
+
+		i {
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
