@@ -51,7 +51,7 @@ header {
       .chat-container .chat-list .chat-message .message-data {
         display: inline-block;
         padding: 10px;
-        background-color: #0a6ebd;
+        background-color: #512DA8;
         color: white; }
         .chat-container .chat-list .chat-message .message-data span {
           display: block;
@@ -83,7 +83,7 @@ header {
     .chat-container .chat-form button {
       margin-bottom: 0; }
     .chat-container .chat-form input {
-      width: calc(100% - 110px); }
+      width: calc(100% - 115px); }
     .chat-container .chat-form button {
       background-color: #512DA8;
       color: #f9f9f9;

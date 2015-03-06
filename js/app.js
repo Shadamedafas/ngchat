@@ -97,7 +97,6 @@ chatApp.factory("auth", ["$rootScope", "fbutil", "$firebaseAuth", "$location",
 				if (this.authRef.$getAuth()){	
 					this.authRef.$unauth();
 					this.getCurrentUser();
-					console.log("Logged out successfully.");
 				} else {
 					console.log("Not logged in.");
 				}
